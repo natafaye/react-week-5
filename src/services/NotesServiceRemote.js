@@ -1,19 +1,18 @@
 import { createServer, Model } from "miragejs";
-import { NOTES, TAGS } from "./data";
+import { NOTES } from "./data";
 
-const NOTES_ENDPOINT = "/notes"; //'https://crudcrud.com/api/60160ea878fe4ae4b53ed215f2fd8b64/notes';
+// const NOTES_ENDPOINT = 'https://crudcrud.com/api/60160ea878fe4ae4b53ed215f2fd8b64/notes';
+const NOTES_ENDPOINT = "/notes"; // Mock Server endpoint
 
-// MOCK SERVER
+// Mock Server with Mirage JS
 
 createServer({
     models: {
-        note: Model,
-        tag: Model
+        note: Model
     },
     seeds(server) {
         server.db.loadData({
-            notes: NOTES,
-            tags: TAGS
+            notes: NOTES
         });
     },
     routes() {
@@ -32,7 +31,7 @@ createServer({
     }
 });
 
-// NOTES SERVICE
+// Notes Service
 
 const getFetchOptions = (method, data) => ({ 
     method: method, 

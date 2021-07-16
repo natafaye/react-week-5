@@ -45,8 +45,6 @@ export default function Upload() {
             (file, index) => fileData.append(`file-${index}`, file, file.name)
         );
         const resp = await uploadFile(fileData);
-        
-        console.log(resp);
 
         setStatus( (resp.success) ? SUCCESS : FAILURE );
         setStatusMessage( (resp.success) ? "File was successfully uploaded" : `Error: ${resp.data.message}` );
