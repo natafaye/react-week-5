@@ -58,6 +58,7 @@ export const notesSlice = createSlice({
     extraReducers: {
         [fetchNotes.fulfilled]: (state, action) => {
             state.entities = action.payload;
+            if(!state.entities) state.entities = []
             state.loading = 'success';
         },
         [createNewNote.fulfilled]: (state, action) => {

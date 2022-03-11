@@ -1,7 +1,7 @@
 import { createServer, Model } from "miragejs";
 import { NOTES } from "./data";
 
-// const NOTES_ENDPOINT = 'https://crudcrud.com/api/60160ea878fe4ae4b53ed215f2fd8b64/notes';
+// const NOTES_ENDPOINT = 'https://crudcrud.com/api/f46d311529d04ee293015b2023d2b949/notes';
 const NOTES_ENDPOINT = "/notes"; // Mock Server endpoint
 
 // Mock Server with Mirage JS
